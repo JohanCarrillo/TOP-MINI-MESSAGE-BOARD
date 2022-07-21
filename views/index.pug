@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  header 
+    h1= 'Messages Board'
+    p= 'Say something you want people to know!'
+  main 
+    div(id="link-container")
+      a(class="link", href="/new") add new message
+
+    div(id="messages-container")
+      each message in messages
+        div(class="message-block") 
+          div text:  #{message.text}
+          div user: #{message.user} 
+          div added: #{message.added}

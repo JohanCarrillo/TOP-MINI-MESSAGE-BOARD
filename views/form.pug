@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	header 
+		h1= 'Messages Board'
+		p= 'Say something you want people to know!'
+
+	form(method="post", id="form-container")
+		p
+			label(for="form[authorName]") Author's name: 
+				input(type="text", name="authorName", required)
+		p
+			label(for="form[messageText]") Text message: 
+				input(type="text", name="messageText", required)
+		p.button-container
+			input(type="submit", value="Save" class="buttons")
